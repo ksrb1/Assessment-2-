@@ -1,0 +1,1209 @@
+﻿/*these are the fonts that i decided to used or was going to use*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*this is for the styling of the scrollbar*/
+/*this is the width of the scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+/*the background of the scrollbar*/
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 14px;
+}
+/*the the box where the scrollbar is on the page*/
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius:14px;
+}
+/* when the thumb is being hovered on*/
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*makes it so when you scrol its smooth (scroll done by the other things)*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*changes the font for all the texts*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*styling for body, added margin 0 since its originally has margin height auto is used so the nav bars position sticky works through out the whole body section otherwise id have to specify the exact height of the body*/
+body {
+    margin: 0;
+    height: auto;
+    background: #0f0f0f;
+}
+
+/*the styling for the navigation bar, i added transition so when it fades from transparent to color after scrolling, index 999 so its on top of everything */
+nav {
+    background: none;
+    width: 100%;
+    height:75px;
+    position: sticky;
+    top: 0;
+    transition: ease-in-out 0.3s;
+    z-index:999;
+}
+
+/* styling for the nav bars img which is also the logo for the website*/
+nav img {
+    position: relative;
+    top: 20%;
+    left: 14%;
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 90px;
+}
+
+/*styling for the title next to the img */
+nav h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: white;
+    position: relative;
+    top: 27%;
+    left: 15%;
+    float: left;
+    font-weight: 600;
+    font-size:1.4em;
+}
+
+/* for the navbar i decided to use a list to style the different links for the other pages of the website*/
+nav ul {
+    float: right;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    top: 35%;
+    right: 15%;
+}
+/* these are just the styling for the list item*/
+nav li {
+    float: left;
+    margin: 0 17px;
+    display: inline-block;
+}
+ 
+/*this is for the styling of the links itself*/
+nav a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/*Miss ill be honest i got this online, animations that use the :after isnt my strong point so i had to search this one up, but other than that its a simple animation for hover*/
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav.stroke ul li a{
+    position: relative;
+}
+
+/* this is the part that uses the ':after' that basically allows the hover effect to work*/
+nav.stroke ul li a:after
+    {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    height:3px;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 3px;
+}
+
+/*body part*/
+
+main {
+    background: #0f0f0f;
+}
+
+/* for most of my styling the names are basically really self explanatory but later down the line i get abit timid so i just start naming them something ease to type*/
+div#body-background {
+    position: relative;
+    top: -75px;
+    background: #0f0f0f;
+    height: 114%;
+    width: 100%;
+}
+
+/*this basically styles the video background to have grayscale and blur*/
+body video { 
+    height: auto;
+    width: 100%;
+    opacity: 0.7;
+    filter: grayscale(10%) blur( 1px);
+}
+
+/* for the most of my code ill be selecting the child element like this so if ever i use a div here and then use a div somewhere else that div somewhere else wont get efected with the way im selecting the main of selecting would be 'section.classname' then a div, h1 or another section depening on what i used*/
+
+/* this is the styling for the title and text on on the start of the screen, i put position absolute so it centers infront of my video background*/
+main article {
+    position: absolute;
+    top: 27%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/*simple styling for the title*/
+main h2 {
+    font-family: 'Kanit',sans-serif;
+    margin: 25px 0 15px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 4.5em;
+    color: white;
+}
+
+/*styling for the text*/
+main p {
+    font-family: 'Poppins',sans-serif;
+    top: 52%;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    width: 55%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+/* styling for hte button*/
+main  button {
+    font-family: 'Kanit',sans-serif;
+    position: absolute;
+    top: 120%;
+    height: 50px;
+    width: 200px;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    background: white;
+    border: none;
+    border-radius:30px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transition: ease 20ms;
+}
+
+button:active {
+    transform: translateY(5px);
+    transition: ease 20ms;
+}
+    /* this is the first section as mention earlier the was of how ill select the child elements. also for the basically all my sections or styling in general i like to used vh otherwise known as veiw height just so its abit responsive but not entirely*/
+    section.how-it-works {
+        position: relative;
+        background: #0f0f0f;
+        height: 100vh;
+        width: 100%;
+    }
+/* styling of the header*/
+section.how-it-works h1 {
+    font-family:'Montserrat';
+    text-align:center;
+    margin: 0;
+    color: white;
+    font-size: 3.0em;
+    font-weight: 600;
+}
+
+/* this is for one of the 'invisble box' to style the three different boxes for the how it works sections*/
+section.how-it-works div {
+    background: none;
+    height: 400px;
+    width: 20%;
+    float: left;
+    position: relative;
+    left: 15%;
+    top: 15%;
+    margin-right: 6%;
+}
+/*another styling for the title*/
+section.how-it-works h2 {
+    margin-top:20%;
+    color: white;
+}
+
+section.how-it-works p {
+    margin-top: 20%;
+    color: white;
+}
+/* styling for the image that is used in the how it works section*/
+img.icons {
+    width: 40%;
+    margin-left:15%;
+}
+
+/*this is for the section with the building background and text infront of it*/
+section.some-info {
+    position:relative;
+    background: black;
+    height:57vh;
+    width:100%;
+}
+
+/* here i used object fit so i dont have to manually crop the image to fit the div */
+section.some-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 50%;
+    /*filter: grayscale(10%) ;*/
+    opacity:0.4;
+}
+
+/* here i didnt use flex box because i forgot those existed which made the code look rough but overall its just to design the text to be centered */
+div.info-box1 {
+    position: absolute;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 3%;
+    right: 0;
+    color: white;
+    height: 30vh;
+    width: 89%;
+    z-index: 10;
+}
+/* this is for each of the information one div has one h1 and one p*/
+div.info-box1 div {
+    height: 220px;
+    width: 17%;
+    float: left;
+    margin: 0 4%;
+}
+/*styling for the h1*/
+div.info-box1 h1 {
+    position:relative;
+    top:15%;
+    font-weight: 500;
+    margin:0;
+    font-size:4.3em;
+    left:15%;
+}
+/*styling for the p*/
+div.info-box1 p {
+    position:relative;
+    margin: 0;
+    top:5%;
+    left: 13%;
+}
+
+/* this is another section for the sucess stories */
+section.success {
+    background: #0f0f0f;
+    width: 100%;
+    height: 120vh;
+    color: white;
+
+}
+
+
+    /*styling for the header*/
+    section.success h1 {
+        font-family: 'Montserrat';
+        text-align: center;
+        margin: 0;
+        padding: 7% 0 4% 0;
+        color: white;
+        font-size: 3.0em;
+        font-weight: 600;
+    }
+
+/* here i actually used flex to make it alot easier to center everything*/
+section.success section {
+    display: flex;
+    position: relative;
+    /*left: 11%;*/
+    justify-content: center;
+}
+
+/* this is for all the divs inside the flex box*/
+section.success div {
+    background: black;
+    border-radius: 3px;
+    height: 470px;
+    width: 370px;       
+    float: left;
+    margin: 0 1%;     
+}
+
+/* styling for the img inside the div */
+section.success div img {
+    border-radius: 3px;
+    position: relative;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 0%;
+    opacity: 0.5;
+}
+
+/*styling for the title again*/
+section.success div h2 {
+    color: white;
+    width:70%;
+    opacity: 1 !important;
+    margin: 0;
+    position: relative;
+    top: -50%;
+    left: 9%;
+    font-weight:500;
+    font-size: 1.65em;
+    line-height:1.1;
+}
+/* styling for the text inside the div*/
+section.success div p {
+    color: white;
+    width: 79%;
+    opacity: 1 !important;
+    margin: 0;
+    position: relative;
+    top: -45%;
+    left: 9%;  
+    line-height: 1.6;
+}
+/* miss for the most part it really just styling the elements :/ */
+section.success button {
+    background: #52bdde;
+    border-radius: 25px;
+    padding: 7px 15px;
+    border:none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    top: -37%;
+    left: 9%;
+}
+/* another new section this is the one with the text and then the background is a road moving*/
+section.second-gif {
+    background: black;
+    width: 100%;
+    height: 60vh;      
+}
+/*same concept i used for the main page i just used a video then edited that video*/
+section.second-gif  video {
+    width:100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: 0%  80%;            
+}
+/* this is the for title text shown over the video*/
+section.second-gif h2 {
+    font-family: 'Montserrat';
+    width:50%;
+    color: white;
+    position: relative;
+    top: -83%;
+    left:25%;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 300;
+}
+
+
+/*Pricing section  (this one was very tedious)  :(  <- sad face   */
+
+section.pricing {
+    width: 100%;
+    height: 110vh;
+    background: #f8f8f8;
+}
+/* this title is for the 'affordable prices' title*/
+section.pricing h1 {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin:0;
+    padding: 9vh 0 10vh 0;
+    color: black;
+    font-size: 2.7em;
+    font-weight: 500;
+}
+
+/* this is the flex box for the thre different options available ,i used flex box here*/
+section.pricing section {
+    display:flex;
+    justify-content:center;
+}
+
+/* this is for all of the div boxs */
+section.pricing div {
+    width: 24%;
+    height: 65vh;
+    border-radius: 5px;
+    background: #f4f4f4;
+    background: white;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+/* this is the header or like the top part of the div box so its a different color from normal*/
+section.pricing div header {
+    width: 100%;
+    height: 10%;
+    background: #1b3874;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+/* this is the heading for each of the divs like the one that says basic, premium or extra*/
+section.pricing div h3 {
+    margin:0;   
+    position:relative;
+    top:25%;
+    font-weight:600;
+    font-size:1.05em;
+    color:white;
+}
+/* this main is where the price is shown, i have two backgrounds cause i couldnt decide if white was better or not*/
+section.pricing div main {
+    background: #f4f4f4;
+    background: white;
+    width: 100%;
+    height: 30%;
+}
+
+/* this is the styling for the text itself, its basically the text for the price part*/
+section.pricing div main h2 {
+    font-family:'Poppins';
+    font-weight:400;
+    text-align:center;
+    margin: 0;
+    color: black;
+    font-size: 1.9em;
+    position:relative;
+    top:29%;                
+}
+
+/* this is just for the dollar sign to make it smaller and above the normal text*/
+section.pricing div main h2 span {
+    position:relative;
+    font-size:0.7em;
+    top:-10px;    
+}
+
+/* this is for the text under the price, where it says per month*/
+section.pricing div main p {
+    font-family: 'Poppins';
+    font-size: 0.9em;        
+    color: grey;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 26%;
+}
+
+/*here i used another list its for the benefits the option offers*/
+section.pricing div ul {
+    list-style: none;
+    margin:0;
+    padding: 0;
+    text-align:center;
+}
+
+/* styling for one of the list item*/
+section.pricing div li {
+    font-size: 0.9em;
+    padding: 4% 0;
+    border-top: 0.2px solid #ccc;
+}
+
+/* styling for the button */
+    section.pricing button {
+        font-size: 0.9em;
+        font-weight: 600;
+        padding: 3% 5%;
+        border-radius: 35px;
+        border: none;
+        background: white;
+        cursor: pointer;
+        position: relative;
+        top: 4%;
+        left: 34%;
+        background: lightblue;
+    }
+/* here i made a special div for the one in the middle, basically its a bit longer and has a different color*/
+section.pricing div.special {
+    position: relative;
+    top: -2vh;
+    height: 69vh !important;
+}
+/*another styling for the speical div so the 'main' part has a different color from the rest*/
+section.pricing div.special main {
+    height: 28%;
+    background: #346de0;        
+}
+/*styling for the special header to make it white to basically boost its contrast since the background is now blue*/
+section.pricing div.special main h2 {
+    color: white;
+}
+/* same concept as with the one on top*/
+section.pricing div.special main p {
+    color :white;
+}
+/* change the background for the header for the special div*/
+section.pricing div.special header {
+    background: #3a79f9;
+}
+
+
+/*  another section this one is for the partners*/
+section.partners {
+    width: 100%;
+    height: 53vh;
+    background: #ffffff;
+}
+/*used a flex box*/
+section.partners div {
+    display:flex;
+    justify-content:center;             
+}
+/* styling for each of the logos added a filter to its black and white*/
+section.partners img {
+    width: 19%;
+    height: auto;
+    float: left;
+    filter: grayscale(100%);
+}
+/*styling for the heading */
+section.partners h1 {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 0;
+    padding: 9vh 0 5vh 0;
+    color: black;
+    font-size: 2.7em;
+    font-weight: 500;
+}
+
+/*Footer section */
+
+footer {
+    background: #191b1d;
+    width:100%;
+    height:50vh;
+    color:white;
+    font-family:'Poppins';
+    font-size: 0.9rem;
+}
+/*this is styling for the about section found in the footer*/
+section.about-text {   
+    position: relative;
+    top: 20%;
+    left: 12%;
+    width: 20%;
+    height: 30vh;
+    float: left;
+}
+/* the about sections header in the footer*/
+section.about-text h3 {
+    font-size: 1em;
+}
+/* i basically used list for the styling or like the position of the sections*/
+footer ul {
+    font-size: 1em;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 10% !important;
+    height: 30vh;
+    float: left;
+    list-style: none;
+}
+/* this is for the headers inside the list*/
+footer ul h3 {
+    font-size:1em;
+    font-weight:600;
+    margin:0 0 5% 0;
+    cursor:default;
+}
+/* here i made the cursor to pointer so it has the illusion that its a link but its not since its just a list item */
+footer li {
+    padding:2% 0; 
+    font-weight:400;
+    cursor:pointer;
+}
+/* this is for the styling for the connect with us where it shows the different logos like facebook and twitter*/
+footer section.connect {
+    position: relative;
+    top: 25%;
+    left: 17%;
+    width: 13%; 
+    height: 30vh;
+    float: left;
+    text-align:center;
+}
+/*styling for the header for connect*/
+footer section.connect h3 {
+    font-size:1em;
+    font-weight:600;
+}
+/* using flex box again to center the images*/
+footer section.connect div {
+    display:flex;
+    justify-content:center;
+}
+/*the image styling*/
+footer section.connect img {
+    margin:2%;
+    width: 17%;
+    cursor:pointer;
+}
+/*this is for hte text found at the very bottom where it says copyrights*/
+footer p.copyrights {
+    display:block;
+    font-weight:600;
+    position: relative;
+    top:20%;
+    left:12%;
+    width:40%;   
+    height:10px;
+    margin:0 0 1% 0;
+    background:none;
+    font-size:0.7rem;
+} 
+
+
+
+/* contact us page*/
+
+/* I had to add these cause the bootstrap code was messing up with my stylesheet */
+h1.contact-h1 {
+    position:relative;
+    top:30%;
+}
+/* same case with this one*/
+article.contact-article {
+  top:35%;   
+}
+/* theres like this bottom margin the gif has and it looks really ugly, i added this so it will overlap the margin*/
+div.lazy-styling {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    top: -15vh;
+    background: #0f0f0f;
+}
+/*header styling for faq*/
+section.faq h1 {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 0 0 5% 0 ;
+    padding: 3% 0 0 0;
+    color: white;
+    font-size: 3.0em;
+    font-weight: 600;
+}
+/*styling for the faq body*/
+section.faq {
+    position: relative;
+    top:-20vh;
+    left: 10%;
+    width: 80%;
+    background: #0f0f0f;
+}
+/* i just changed the font for the accordion since it was using a different one that boostrap provided*/
+button.accordion-button {
+    font-family: 'Poppins';
+    font-weight:600;
+}
+/* this is for the contact section*/
+section.contact-form {
+    background: #f7f8fc;
+    height: 105vh;
+    display: flex;
+    justify-content: center;
+}
+/*styling of the form itself */
+section.contact-form section.form-section {
+    padding: 2% 0 0 2%;
+    width: 36%;
+    height: 85vh;
+    background: white;
+    float: left;
+    margin: 5% 6% 0 3%;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+} 
+
+
+section.contact-form section {
+    width: 45%;
+    height: 80vh;
+    background: none;
+    float:left;
+    margin:3% 0 0 0;
+
+}
+
+/*here my code just gets really messy cause i got lazy but its just the styling for the width so it takes the whole widht of hte form so when i make widths for the input boxes they take value from this one*/
+section.contact-form form {
+    width:100%;
+}
+
+section.contact-form lable {
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin: 2% 0 2% 2%;
+}
+/*this styling for hte input for text*/
+section.contact-form input[type=text] {
+    width:45%;
+    margin: 2% 0 2% 1%;
+    padding:2.5% 1%;
+    border-radius:7px;
+    border:1px solid #ccc ;
+}
+/*each of these ones here are very self explanatory they just style for each of the input types*/
+section.contact-form input[type=text]#message {
+    width: 91%;
+    margin: 2% 0 2% 1%;
+    padding: 2.5% 1%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+section.contact-form input[type=email] {
+    display: inline-block;
+    width: 91%;
+    margin: 2% 0 2% 1%;
+    padding: 2.5% 1%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+section.contact-form textarea {
+    display: inline-block;
+    width: 91%;
+    margin: 2% 0 2% 1%;
+    padding: 2.5% 1%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    max-height:20vh;
+    height:10%;
+}
+
+  
+/* this is the styling for the section that has text next to the form*/
+section.contact-form section div {
+    position: relative;
+    top: 23%;
+}  
+/* the section's header styling*/
+section.contact-form h1 {
+    font-family: 'Poppins';
+    text-align: left;
+    color: black;
+    font-size: 2.1em;
+    font-weight: 600;       
+}
+/*styling for the p text*/
+section.contact-form section p {
+    margin: 4% 0 6% 0;
+    width:80%;
+}
+/*ontop of the p text is some header text*/
+div.related-topics h3 {
+    margin: 3% 0 2% 0;
+    font-size: 1.1em;
+    font-weight:600;
+}
+
+div.related-topics p {
+    margin:1% 0 !important;
+}
+
+/*About us page*/
+/*same styling i just used object fit:cover so it takes up the whole width and height of the background without distorting the image*/
+img.about-bg {
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    object-position: 70% 35%;
+    opacity: 0.6;
+}
+
+/* this is to move the about us title in the main screen abit up*/
+article.aboutsus {
+    top:23%;
+}
+/* styling for the p text found under the about us */
+article.aboutsus p {
+    font-family: 'Poppins';
+    font-size: 0.98em;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 28px;
+}
+/* this is so the position sticky applies only until its needed*/
+section.what-is {
+    height:auto;
+}
+/* this is the header where i used position sticky */
+section.what-is h1 {
+    position:sticky;
+    color: white;
+    font-size: 4.5em;
+    font-family: 'Kanit';
+    font-weight:400;
+    top:20%;       
+    margin:0 0 0 7%;
+    z-index:888;
+}
+
+section.what-is section {
+    width: 100%;
+    height: 60vh;
+    margin: 15vh 0;
+}
+/* styling for hte images found in the what is seciton*/
+section.what-is section img {
+    width: 20%;
+    position: relative;
+    top: 5%;
+    left: 8%;
+    float:left;
+    opacity:0.7;
+}
+/* styling for the divs*/
+section.what-is section div {
+    width: 40%;     
+    height: 100%;
+    float: right;
+    position:relative;
+    left:-4%;       
+}
+/* styling for the header*/
+section.what-is h2 {
+    font-family: 'Kanit';
+    font-weight: 300;
+    text-align: left;
+    width: 85%;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+/* styling for the text under the header*/
+section.what-is p {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 0.85em;
+    width: 93%;
+    text-align: left;
+    margin: 3% 0 0 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height:28px;
+}
+
+
+/* service page*/
+/*to move the title abit lower on the main screen*/
+article.servicsus {
+    top: 33%;
+}
+
+/*making the font weight bit lower*/
+article.servicsus h2 {
+    font-weight:500;
+}
+/*styling for hte button*/
+article.servicsus button {
+    background: none;
+    top:255%;
+    width:6%;
+    transition: ease 100ms;
+}
+/* styling for when the button is howevered*/
+article.servicsus button:hover{
+    top:265%;
+}
+/*styling for hte images found in the serevices*/
+article.servicsus img {
+    width: 100%
+}
+/*for the we offer section*/
+section.we-offer {
+    height:115vh;
+}
+/*styling for hte header*/
+section.we-offer h1 {
+    font-family:'Montserrat';
+    text-align:center;
+    margin: 0;
+    padding: 4% 0 4% 0;
+    color: white;
+    font-size: 3.0em;
+    font-weight: 600;
+}
+/*using flex again*/
+section.we-offer section {
+    width: 100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    position:relative;
+    top:-7%;
+}
+/* the boxes for said flex*/
+section.we-offer section div {
+    width:26%;
+    height:35vh;
+    float:left; 
+    margin:  1% 0.5%;
+}
+
+/* styling for the imgs that cna be found in the we offer section*/
+section.we-offer section img {
+    display: block;
+    width: 30%;
+    margin: 10% auto 0 auto;
+}
+/*styling for the header which is like the sub heading under the img*/
+section.we-offer section h4 {
+    color: white;
+    font-family:'Poppins';
+    text-align:center;
+    margin:5% 0;
+    font-weight:500;
+}
+/* for the text inside each one of the box found under we offer section*/
+section.we-offer section p {
+    margin:0 auto;
+    width:90%;
+    font-size:0.9em;
+    text-align:center !important;
+}
+/* for reviews section*/
+section.reviews {
+    width:100%;
+    height:110vh;
+    background: #f4f4f4;
+}
+
+section.reviews h1 {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 0;
+    padding: 6% 0 4% 0;
+    color: black;
+    font-size: 3.0em;
+    font-weight: 600;
+}
+
+
+
+section#review-flex {
+    /*background: orange;*/
+
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    transition:ease 200ms;
+    overflow:auto;   
+    display:flex;
+    justify-content:center;
+} 
+/*styling for the review using another flex*/
+section#review-flex div {
+    width: 20vw;
+    height: 60vh;
+    background: white;
+    float: left;
+    margin: 1% 2vw 0 0;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+/* for the review page face*/
+img.face {
+    display: block;
+    width: 32%;
+    height:12.9vh;
+    margin: 10% auto 0 auto;
+    object-fit:cover;
+    object-position:30% 10%;
+    border-radius:100%;
+}
+
+/* for the stars which is like the review stars*/
+img.stars {
+    display: block;
+    width: 50%;
+    margin: 5%  auto;
+}
+
+section#review-flex div h5 {
+    margin: 5% 0 0 0;
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+}
+/*styling for the text found inste the review*/
+section#review-flex div p {
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    font-size: 0.87em;
+    width: 80%;
+    min-height:19vh;
+    display: block;
+}
+/* this is for the how many months ago uploaded found at the very bottom of the card*/
+section#review-flex div label {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-size: 0.87em;
+    width: 80%;
+    margin: auto;
+    display: block;
+    font-weight: 700;
+    opacity: 0.5;
+}
+/* when a link is hovered i think this was for some sort of fix since i was using bootstrap*/
+a:hover {
+    text-decoration:none;
+    color:white;
+}
+
+/*Gallery page*/
+
+body#gallery {
+    background:white !important;
+}
+/* just styling the carousel moving abit higher up the page so it covers up to the nav bar*/
+div.carousel-item img {
+    height:100vh;
+    object-fit:cover;
+    object-position:10% 50%;
+    opacity:0.6;
+}
+/* positioning for the header*/
+section.gallery-header {
+    position: absolute;
+    top: 30%;
+    color: white;
+    transition: none;
+    text-align: center;
+    left: 30%;
+    
+}
+/* styling for the header */
+section.gallery-header h2 {
+    font-family: 'Kanit',sans-serif;
+    margin: 25px 0 15px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 4.5em;
+    color: white;
+}
+/* the gallery section*/
+section.gallery {
+    background:white;
+    width:100%;
+    height:150vh;   
+}
+/* galler heading*/
+section.gallery h2 {
+    font-family: 'Montserrat';
+    padding: 3% 0 7% 5%;
+    margin: 0;          
+    color: black;
+    font-size: 3.2em;
+    font-weight: 600;
+}
+/* using flex*/
+section.gallery section {
+    width:90%;
+    margin:auto;
+    height:105vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+/* for one img*/
+section.gallery section div {
+    width: 33.33%;
+    height: 50%;
+    float: left;
+    background: black;
+    overflow: hidden;
+    border:2px solid white;
+}
+/*styling for the div*/
+section.gallery section div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 50%;
+    transition: ease 700ms;
+    opacity:0.6;
+        
+}
+/* when the img get hovered its going to zoom in and darken cause of hte opacity lessening*/
+section.gallery section div img:hover {
+    width: 110%;
+    height: 110%;
+    object-position: 80% 90%;
+    opacity:0.4;
+}
+
+
+/* this is the animation that enables fade in after it gets scrolled*/
+.animated {
+    opacity: 0;
+}
+/* the fade in animation*/
+.fade-in-top {
+    animation: fadeInTop;
+    animation-fill-mode: forwards;
+    animation-duration: 1.7s;
+    animation-timing-function: ease;
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity:0;
+        transform: translateY(90px);
+        
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
